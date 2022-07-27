@@ -176,7 +176,10 @@ py_library(
     name = "model",
     srcs = ["model.py"],
     srcs_version = "PY3",
-    deps = ["@org_tensorflow//tensorflow:tensorflow_py_no_contrib"],
+    deps = [
+        "//tensorflow_federated/python/common_libs:pytypes",
+        "@org_tensorflow//tensorflow:tensorflow_py_no_contrib",
+    ],
 )
 
 py_library(

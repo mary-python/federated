@@ -120,6 +120,13 @@ py_test(
 )
 
 py_library(
+    name = "pytypes",
+    srcs = ["pytypes.py"],
+    srcs_version = "PY3",
+    deps = ["@org_tensorflow//tensorflow:tensorflow_py_no_contrib"],
+)
+
+py_library(
     name = "retrying",
     srcs = ["retrying.py"],
     srcs_version = "PY3",
